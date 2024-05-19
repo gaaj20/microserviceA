@@ -9,61 +9,6 @@ def fahrenheit_to_celsius(fahrenheit):
 def celsius_to_kelvin(celsius):
     return celsius + 273.15
 
-# def convert_temperature(input_file, output_file, conversion_type):
-#     try:
-#         while True:
-#             # Wait until the input file is not empty
-#             while True:
-#                 with open(input_file, 'r') as f_in:
-#                     value_str = f_in.read().strip()
-#                     if value_str:
-#                         break  # Break the loop if the file is not empty
-#                 time.sleep(1)  # Sleep for a while before checking again
-
-#             # Convert the value string to float
-#             try:
-#                 value = float(value_str)
-#             except ValueError:
-#                 print("Invalid value in input file:", value_str)
-#                 time.sleep(1)  # Sleep for a while before checking again
-#                 continue
-
-#             # Perform the corresponding temperature conversion based on conversion type
-#             if conversion_type == "fahrenheit_to_celsius":
-#                 result = fahrenheit_to_celsius(value)
-#                 unit = "Celsius"
-#             elif conversion_type == "celsius_to_fahrenheit":
-#                 result = celsius_to_fahrenheit(value)
-#                 unit = "Fahrenheit"
-#             else:
-#                 result = celsius_to_kelvin(value)
-#                 unit = "Kelvin"
-
-#             with open(output_file, 'w') as f_out:  # Open in write mode to clear the file content
-#                 f_out.write("{:.2f} {}\n".format(result, unit))
-
-
-#             # Clear the content of the input file
-#             with open(input_file, 'w') as f_clear:
-#                 f_clear.truncate(0)
-
-#     except Exception as e:
-#         print("An error occurred:", e)
-
-# if __name__ == "__main__":
-#     input_files = ["fahrenheit_to_celsius_input.txt", "celsius_to_fahrenheit_input.txt", "celsius_to_kelvin_input.txt"]
-#     output_file = "output.txt"
-
-#     for input_file in input_files:
-#         if input_file == "fahrenheit_to_celsius_input.txt":
-#             conversion_type = "fahrenheit_to_celsius"
-#         elif input_file == "celsius_to_fahrenheit_input.txt":
-#             conversion_type = "celsius_to_fahrenheit"
-#         else:
-#             conversion_type = "celsius_to_kelvin"
-        
-#         convert_temperature(input_file, output_file, conversion_type)
-
 def convert_temperature(input_files, output_file):
     try:
         while True:
